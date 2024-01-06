@@ -4,12 +4,14 @@ import com.google.gson.Gson;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import org.springframework.stereotype.Service;
 import pl.wasik.damian.java.speakjokes.api.ChuckNorrisJokesApiResponse;
 
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+@Service
 public class ChuckNorrisJokesService {
     private static final Logger LOGGER = Logger.getLogger(ChuckNorrisJokesService.class.getName());
     private static final String API_URL = "https://api.chucknorris.io/jokes/random";

@@ -11,7 +11,7 @@ class SpeakJokeServiceTest {
     void speakJoke() throws IOException {
         //Given
         AudioPlayService audioPlayService = new AudioPlayService();
-        ChuckNorrisJokesService chuckNorrisJokesService = new ChuckNorrisJokesService();
+        ChuckNorrisJokesService chuckNorrisJokesService = new ChuckNorrisJokesService(null);
         VoiceRssService voiceRssService = new VoiceRssService(audioPlayService);
         SpeakJokeService speakeJokeService = new SpeakJokeService(chuckNorrisJokesService, voiceRssService);
 

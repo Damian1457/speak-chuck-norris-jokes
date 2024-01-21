@@ -6,7 +6,7 @@ import pl.wasik.damian.java.speakjokes.service.ChuckNorrisJokesService;
 
 public class ChuckNorrisJokesApplication {
     public static void main(String[] args) {
-        ChuckNorrisJokesService chuckNorrisJokesService = new ChuckNorrisJokesService();
+        ChuckNorrisJokesService chuckNorrisJokesService = new ChuckNorrisJokesService(null);
         ChuckNorrisJokesController chuckNorrisJokesController = new ChuckNorrisJokesController(chuckNorrisJokesService);
 
         ChuckNorrisJokesApiResponse chuckNorrisJokesApiResponse = chuckNorrisJokesController.randomJoke();

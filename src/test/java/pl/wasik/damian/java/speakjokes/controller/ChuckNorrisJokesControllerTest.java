@@ -10,7 +10,7 @@ class ChuckNorrisJokesControllerTest {
     @Test
     void randomJoke() {
         //Given
-        ChuckNorrisJokesService chuckNorrisJokesService = new ChuckNorrisJokesService();
+        ChuckNorrisJokesService chuckNorrisJokesService = new ChuckNorrisJokesService(null);
         ChuckNorrisJokesController chuckNorrisJokesController = new ChuckNorrisJokesController(chuckNorrisJokesService);
 
         //When

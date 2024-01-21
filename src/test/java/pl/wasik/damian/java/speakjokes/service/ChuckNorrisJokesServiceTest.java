@@ -11,7 +11,7 @@ class ChuckNorrisJokesServiceTest {
     @Test
     void getResponse() throws IOException {
         //Given
-        ChuckNorrisJokesService chuckNorrisJokesService = new ChuckNorrisJokesService();
+        ChuckNorrisJokesService chuckNorrisJokesService = new ChuckNorrisJokesService(null);
         String url = "https://api.chucknorris.io/jokes/random";
 
         //When
@@ -24,7 +24,7 @@ class ChuckNorrisJokesServiceTest {
     @Test
     void convert() {
         //Given
-        ChuckNorrisJokesService chuckNorrisJokesService = new ChuckNorrisJokesService();
+        ChuckNorrisJokesService chuckNorrisJokesService = new ChuckNorrisJokesService(null);
 
         //When
         ChuckNorrisJokesApiResponse chuckNorrisJokesApiResponse = chuckNorrisJokesService.convert("{\n" +
@@ -43,7 +43,7 @@ class ChuckNorrisJokesServiceTest {
     @Test
     void randomJoke() {
         //Given
-        ChuckNorrisJokesService chuckNorrisJokesService = new ChuckNorrisJokesService();
+        ChuckNorrisJokesService chuckNorrisJokesService = new ChuckNorrisJokesService(null);
 
         //When
         ChuckNorrisJokesApiResponse chuckNorrisJokesApiResponse = chuckNorrisJokesService.randomJoke();

@@ -6,6 +6,8 @@ import okhttp3.Request;
 import okhttp3.Response;
 import org.springframework.stereotype.Service;
 import pl.wasik.damian.java.speakjokes.api.ChuckNorrisJokesApiResponse;
+import pl.wasik.damian.java.speakjokes.repository.JokesRepository;
+import pl.wasik.damian.java.speakjokes.repository.entity.JokesEntity;
 
 import java.io.IOException;
 import java.util.logging.Level;
@@ -16,13 +18,24 @@ public class ChuckNorrisJokesService {
     private static final Logger LOGGER = Logger.getLogger(ChuckNorrisJokesService.class.getName());
     private static final String API_URL = "https://api.chucknorris.io/jokes/random";
 
+    private final JokesRepository jokesRepository;
     private OkHttpClient client = new OkHttpClient();
+
+    public ChuckNorrisJokesService(JokesRepository jokesRepository) {
+        this.jokesRepository = jokesRepository;
+    }
 
     public ChuckNorrisJokesApiResponse randomJoke() {
         LOGGER.info("randomJoke()");
         try {
             String responseBody = getResponse(API_URL);
             ChuckNorrisJokesApiResponse chuckNorrisJokesApiResponse = convert(responseBody);
+            String joke = chuckNorrisJokesApiResponse.getValue();
+
+            JokesEntity jokeEntity = new JokesEntity();
+            jokeEntity.setJokes(joke);
+            JokesEntity savedJokesEntity = jokesRepository.save(jokeEntity);
+            LOGGER.info("savedJokesEntity: " + savedJokesEntity);
             LOGGER.info("randomJoke(...) = " + chuckNorrisJokesApiResponse);
             return chuckNorrisJokesApiResponse;
         } catch (IOException e) {

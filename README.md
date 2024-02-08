@@ -71,11 +71,8 @@ You can customize these parameters according to your needs. For example, you can
 
 ## Testing
 
-Unit tests are available in the `src/test/java` directory and can be run using Maven:
+Unit tests are available in the `src/test/java`.
 
-```bash
-mvn test
-```
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

@@ -4,7 +4,7 @@
 
 "Speak Chuck Norris Jokes" is an innovative Java application that provides unforgettable experiences to users by delivering the freshest and funniest jokes about the legendary Chuck Norris. Utilizing advanced technology, the application automatically fetches the latest jokes from an external Chuck Norris API and reads them aloud, ensuring users a constant smile on their faces. The implementation is based on the efficient Spring Boot framework, guaranteeing the stability, scalability, and flexibility of the application. "Speak Chuck Norris Jokes" is more than just an application - it is an interactive adventure that immerses users in the world of humor and entertainment.
 
-## Versions
+## Technologies/Versions
 
 - Java: 17
 - Spring Boot: 3.2.1

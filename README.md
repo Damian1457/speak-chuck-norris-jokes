@@ -64,9 +64,6 @@ spring.datasource.username=sa
 spring.datasource.password=
 spring.h2.console.enabled=true
 ```
-
-## Configuration
-
 You can customize these parameters according to your needs. For example, you can change the database name (`speak-jokes`) or the database access password (`spring.datasource.password`).
 
 ## Testing

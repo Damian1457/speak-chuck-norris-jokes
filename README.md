@@ -28,21 +28,27 @@
 - Fully customizable application configuration through the `application.properties` file.
 - Integration with the Chuck Norris API, allowing access to a wide range of Chuck Norris jokes in real-time.
 
-## Installation
+## Running / Installation
 
-1. Clone the repository:
+To run the application, follow these steps:
 
-    ```bash
+1. **Open the project in IntelliJ IDEA**: Clone the repository to your computer, and then open the project in IntelliJ IDEA. You can clone the repository using the following link:
+
+    ```
     git clone https://github.com/Damian1457/speak-chuck-norris-jokes.git
     ```
 
-2. Compile and run the application using Maven:
+2. **Find the `SpeakChuckNorrisJokesApplication.java` file**: This file contains the main class of the application annotated with `@SpringBootApplication`. You can find it in the `src/main/java/pl/wasik/damian/java/speakjokes` directory. Right-click on the `SpeakChuckNorrisJokesApplication.java` file, and then select "Run 'SpeakChuckNorrisJokesApplication'".
 
-    ```bash
-    mvn spring-boot:run
+3. **Open the local host in your browser**: After running the application, open your web browser and enter the following URL:
+
+    ```
+    http://localhost:8080/jokes
     ```
 
-3. Open your browser and navigate to `http://localhost:8080` to see the application in action.
+   This will display the Chuck Norris jokes page in the application. You can click on the "Random Joke" button to display a random joke.
+
+After completing these steps, the application should be running in IntelliJ IDEA, and the Chuck Norris jokes page will be available at `http://localhost:8080/jokes`. Clicking on the "Random Joke" button will display a random joke. If you encounter any errors, make sure your environment is properly configured and all dependencies are downloaded and installed.
 
 ## Configuration
 

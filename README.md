@@ -52,19 +52,7 @@ After completing these steps, the application should be running in IntelliJ IDEA
 
 ## Configuration
 
-In the `src/main/resources/application.properties` file, you'll find the application configuration:
-
-```properties
-spring.jpa.generate-ddl=true
-spring.jpa.hibernate.ddl-auto=update
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.url=jdbc:h2:~/speak-jokes
-spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
-spring.datasource.username=sa
-spring.datasource.password=
-spring.h2.console.enabled=true
-```
-You can customize these parameters according to your needs. For example, you can change the database name (`speak-jokes`) or the database access password (`spring.datasource.password`).
+Before running the application, you need to configure the H2 database.
 
 ## Testing
 
